@@ -32,12 +32,19 @@ body{
   color: var(--color);
 }
 
-/* header{
+header{
   display: grid;
   place-content: center;
-} */
+}
 
 nav{
+  box-shadow:
+  0px 1.8px 2.7px rgba(0, 0, 0, 0.022),
+  0px 4.4px 6.9px rgba(0, 0, 0, 0.031),
+  0px 9px 14.2px rgba(0, 0, 0, 0.039),
+  0px 18.6px 29.2px rgba(0, 0, 0, 0.048),
+  0px 51px 80px rgba(0, 0, 0, 0.07)
+;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -97,8 +104,6 @@ main{
 
 
 section{
-  margin-top: -8rem;
-  padding-top: 8rem;
   padding: 4.8rem;
 }
 
@@ -141,7 +146,7 @@ footer{
 }
 
 .slideshow-container {
-  width: 192rem;
+  width: fit-content;
   height: 50rem;
 }
 
@@ -150,7 +155,7 @@ footer{
   background-image: url("../images/law.jpg") no-repeat;
   background-size: cover;
   background-position: 0 55%;
-  position: relative;
+  position: absolute;
   margin-top: 10rem;
 }
 
@@ -180,18 +185,18 @@ footer{
 }
 
 #nossa-missao{
-  margin-top: 10rem;
-  padding-top: 10rem;
+  margin-top: 20rem;
+  padding-top: 20rem;
 }
 
 #sobre-nos{
-  margin-top: 10rem;
-  padding-top: 10rem;
+  margin-top: 20rem;
+  padding-top: 20rem;
 }
 
 #nossos-servicos{
-  margin-top: 10rem;
-  padding-top: 10rem;
+  margin-top: 20rem;
+  padding-top: 20rem;
 }
 
 #fale-conosco{
