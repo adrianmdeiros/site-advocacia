@@ -1,0 +1,245 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialised;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Rubik', sans-serif;
+}
+
+:root{
+  font-size: 62.5%;
+  --bg-color: #0D1B2A;
+  --color: #f5f5f5;
+  --btn-hover: #1B263B;
+  --link-hover: #778DA9;
+  --border: #E0E1DD
+}
+
+.flex{
+  display: flex;
+}
+
+.grid{
+  display: grid;
+}
+
+body{
+  min-width: 100%;
+  min-height: 100vh;
+  font-size: 1.6rem;
+  background-color: var(--bg-color);
+  color: var(--color);
+}
+
+/* header{
+  display: grid;
+  place-content: center;
+} */
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 9rem;
+  padding: 0 2.4rem;
+  background-color: var(--bg-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+}
+
+#logo{
+  align-items: center;
+  gap: .8rem;
+  text-decoration: none;
+  color: var(--color);
+}
+
+h1{
+  color: var(--color);
+}
+
+ul{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+li:last-child{
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+li:last-child:hover{
+  opacity: 0.9;
+}
+
+li a{
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--color);
+}
+
+
+li a:hover{
+  color: var(--link-hover);
+}
+
+main{
+  display: grid;
+  /* gap: 2.4rem; */
+}
+
+
+section{
+  margin-top: -8rem;
+  padding-top: 8rem;
+  padding: 4.8rem;
+}
+
+p{
+  text-align: justify ;
+}
+
+input, textarea{
+  padding: 1rem;
+  border: .2rem solid var(--border);
+  border-radius: .5rem;
+  margin-bottom: 1.4rem;
+}
+
+
+button{
+  background-color: var(--bg-color);
+  color: var(--color);
+  cursor: pointer;
+  border: none;
+  border-radius: .5rem;
+  padding: 1.4rem;
+  font-weight: 500;
+  letter-spacing: .1rem;
+}
+button:hover{
+  background-color: var(--btn-hover);
+}
+
+footer{
+  background-color: var(--bg-color);
+  display: grid;
+  place-content: center;
+  color: var(--color);
+  padding: 2.8rem;
+}
+
+.active{
+  color: var(--hover)
+}
+
+.slideshow-container {
+  width: 192rem;
+  height: 50rem;
+}
+
+.slide {
+  /* display: none; */
+  background-image: url("../images/law.jpg") no-repeat;
+  background-size: cover;
+  background-position: 0 55%;
+  position: relative;
+  margin-top: 10rem;
+}
+
+.services{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.service{
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.8rem;
+  padding: 2rem;
+  background-color: var(--color);
+  color: var(--bg-color);
+  border: .2rem solid var(--border);
+  border-radius: 1rem;
+  max-width: 28rem;
+}
+.service i{
+  font-size: 3.8rem;
+}
+
+#nossa-missao{
+  margin-top: 10rem;
+  padding-top: 10rem;
+}
+
+#sobre-nos{
+  margin-top: 10rem;
+  padding-top: 10rem;
+}
+
+#nossos-servicos{
+  margin-top: 10rem;
+  padding-top: 10rem;
+}
+
+#fale-conosco{
+  display: flex;
+  justify-content: center;
+  margin-top: 9rem;
+  padding-top: 12rem;
+  gap: 4.8rem;
+  background-color: var(--color);
+  color: #040f16;
+}
+
+#fale-conosco h2{
+  margin-bottom: 2.4rem;
+}
+
+.form, .infos{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2.4rem;
+  min-width: 28rem;
+  width: 42rem;
+}
+
+label{
+  font-weight: 500;
+}
+
+.infos p{
+  margin-bottom: 2.4rem;
+}
+
+.btn-top{
+  color: var(--link-hover);
+  font-size: 4.8rem;
+  text-decoration: none;
+  width: fit-content;
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+}
+
+
+
+
+
+
+
+
+

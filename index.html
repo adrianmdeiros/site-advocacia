@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <title>Advocacia</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="index.html" id="logo">
+        <span id="logo" class="flex">
+          <i class="ph ph-scales" style="font-size: 4.8rem;"></i>
+          <h1>Advocacia</h1>
+        </span>
+      </a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#nossa-missao">Nossa missão</a></li>
+        <li><a href="#sobre-nos">Sobre nós</a></li>
+        <li><a href="#nossos-servicos">Nosso serviços</a></li>
+        <li><a href="#fale-conosco" style="color: var(--bg-color)">Fale Conosco</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="slideshow-container">
+      <div class="slide"></div>
+      <div class="slide"></div>
+      <div class="slide"></div>
+    </div>
+    <section id="nossa-missao">
+      <h2>Nossa missão</h2>
+      <br>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ab qui voluptas hic natus cumque velit aut
+        aspernatur reprehenderit animi suscipit, earum ipsum! Obcaecati esse accusantium ea, minus odio neque?
+        Optio quos vel molestiae velit quibusdam maxime commodi aut repellat ullam expedita ab, voluptas perferendis
+        placeat voluptatem adipisci asperiores quaerat tenetur ipsa. Aperiam in aliquid iste facere iure numquam
+        cupiditate?
+      </p>
+    </section>
+    <section id="sobre-nos">
+      <h2>Sobre nós</h2>
+      <br>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque assumenda consectetur repudiandae. Maxime
+        mollitia
+        ea, omnis velit ut dolore laudantium sunt voluptatum nemo quae deserunt modi assumenda dicta, quibusdam ad?
+        Autem atque sequi commodi harum totam porro quam libero, amet unde cupiditate quo neque exercitationem quae
+        quaerat ducimus repellat eligendi dolore cum distinctio enim beatae recusandae voluptatum? Quo, tempore odio.
+      </p>
+    </section>
+    <section id="nossos-servicos">
+      <h2>Nossos serviços</h2>
+      <br>
+      <div class="services">
+        <div class="service"> 
+          <i class="ph ph-police-car"></i>
+          Acompanhamento na delegacia
+        </div>
+        <div class="service">
+          <i class="ph ph-gavel"></i>
+          Audiência de custódia
+        </div>
+        <div class="service">
+          <i class="ph ph-currency-circle-dollar"></i>
+          Roubo e furto
+        </div>
+        <div class="service">
+          <i class="ph ph-files"></i>
+          Mandados de Prisão
+        </div>
+      </div>
+    </section>
+    <section id="fale-conosco">
+        <form class="form" action="post">
+          <h2>Fale conosco</h2>
+          <label for="name">Nome</label>
+          <input type="text" required name="nome" id="nome" placeholder="Digite seu nome">
+          <label for="email">Email</label>
+          <input type="email" required name="email" id="email" placeholder="Digite seu email">
+          <label for="telefone">Telefone</label>
+          <input type="text" required name="telefone" id="telefone" maxlength="15" placeholder="Digite seu telefone">
+          <label for="mensagem" required name="mensagem" id="mensagem">Mensagem</label>
+          <textarea name="mensagem" id="mensagem" rows="10" placeholder="Digite sua mensagem"></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      <div class="infos grid">
+        <div class="contato">
+          <h2>Contato</h2>
+          <div class="phone">
+            <label>Telefone</label>
+            <a href="">
+              <p>(98) 99165-0677</p>
+            </a>
+          </div>
+          <label>Email</label>
+          <a href="mailto:contato@advocacia.com.br">
+            <p>contato@advocacia.com.br</p>
+          </a>
+        </div>
+        <div class="localizacao">
+          <h2>Localização</h2>
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.0175401270276!2d-44.288743890523875!3d-2.501105038147853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f68c2d49a99ebb%3A0xe32ed43476ebeea1!2sAdvocacia-Geral%20da%20Uni%C3%A3o%20-%20AGU!5e0!3m2!1spt-BR!2sbr!4v1683085358226!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:.2rem solid #dadada; border-radius: 1rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      
+      </div>
+    </section>
+    <section class="noticias">
+
+    </section>
+  </main>
+    <footer>
+      <div>
+        <p>Advocacia © <span id="year"></span> - Todos os direitos reservados.</p>
+      </div>
+    </footer>
+  <a href="#" class="btn-top">
+    <i class="ph ph-arrow-square-up"></i>
+  </a>
+</body>
+<script src="js/inputTelefone.js"></script>
+<script src="js/anoAtualFooter.js"></script>
+<!-- <script src="js/slide.js"></script> -->
+
+</html>
