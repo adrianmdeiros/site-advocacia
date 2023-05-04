@@ -8,8 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/carousel.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://unpkg.com/@glidejs/glide"></script>
+  <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
   <title>Advocacia</title>
 </head>
 
@@ -19,26 +22,39 @@
       <a href="index.html" id="logo">
         <span id="logo" class="flex">
           <i class="ph ph-scales" style="font-size: 4.8rem;"></i>
-          <h1>Advocacia</h1>
+          <!-- <h1>Advocacia</h1> -->
         </span>
       </a>
-      <ul>
+      <ul class="menu">
         <li><a href="#">Home</a></li>
         <li><a href="#nossa-missao">Nossa missão</a></li>
         <li><a href="#sobre-nos">Sobre nós</a></li>
         <li><a href="#nossos-servicos">Nosso serviços</a></li>
-        <li><a href="#fale-conosco" style="color: var(--bg-color)">Fale Conosco</a></li>
+        <li><a href="#fale-conosco" >Fale Conosco</a></li>
       </ul>
+      <i class="ph ph-list hamburguer"></i>
     </nav>
   </header>
   <main>
-    <div class="slideshow-container">
-      <div class="slide"></div>
-      <div class="slide"></div>
-      <div class="slide"></div>
+  <section class="carousel">
+    <div class="glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide">
+            <img class="slide" src="images/law.jpg" alt="" srcset="">
+          </li>
+          <li class="glide__slide">
+            <img class="slide" src="images/law.jpg" alt="" srcset="">
+          </li>
+          <li class="glide__slide">
+            <img class="slide" src="images/law.jpg" alt="" srcset="">
+          </li>
+        </ul>
+      </div>
     </div>
-    <section id="nossa-missao">
-      <h2>Nossa missão</h2>
+  </section>
+  <section id="nossa-missao">
+    <h2>Nossa missão</h2>
       <br>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ab qui voluptas hic natus cumque velit aut
@@ -81,6 +97,24 @@
         </div>
       </div>
     </section>
+    <section id="noticias">
+      <h2>Notícias</h2>
+      <div class="news">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <img class="new" src="images/law.jpg" alt="" srcset="">
+            </li>
+            <li class="glide__slide">
+              <img class="new" src="images/law.jpg" alt="" srcset="">
+            </li>
+            <li class="glide__slide">
+              <img class="new" src="images/law.jpg" alt="" srcset="">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
     <section id="fale-conosco">
         <form class="form" action="post">
           <h2>Fale conosco</h2>
@@ -114,24 +148,19 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.0175401270276!2d-44.288743890523875!3d-2.501105038147853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f68c2d49a99ebb%3A0xe32ed43476ebeea1!2sAdvocacia-Geral%20da%20Uni%C3%A3o%20-%20AGU!5e0!3m2!1spt-BR!2sbr!4v1683085358226!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:.2rem solid #dadada; border-radius: 1rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
-      
       </div>
-    </section>
-    <section class="noticias">
-
     </section>
   </main>
     <footer>
-      <div>
         <p>Advocacia © <span id="year"></span> - Todos os direitos reservados.</p>
-      </div>
+        <p>Made with ❤ by adrianmedeirosdev</p>
     </footer>
   <a href="#" class="btn-top">
     <i class="ph ph-arrow-square-up"></i>
   </a>
 </body>
-<script src="js/inputTelefone.js"></script>
-<script src="js/anoAtualFooter.js"></script>
-<!-- <script src="js/slide.js"></script> -->
+<script src="js/inputphone.js"></script>
+<script src="js/yearfooter.js"></script>
+<script src="js/slide.js"></script>
 
 </html>

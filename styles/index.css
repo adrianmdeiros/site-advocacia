@@ -4,7 +4,6 @@
   box-sizing: border-box;
   -webkit-font-smoothing: antialised;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Rubik', sans-serif;
 }
 
 :root{
@@ -24,6 +23,11 @@
   display: grid;
 }
 
+html{
+  font-family: 'Rubik', sans-serif;
+  scroll-behavior: smooth;
+}
+
 body{
   min-width: 100%;
   min-height: 100vh;
@@ -33,36 +37,31 @@ body{
 }
 
 header{
+  width: 100%;
   display: grid;
-  place-content: center;
-}
-
-nav{
+  height: 9rem;
+  padding: 0 3.2rem;
+  background-color: var(--bg-color);
+  position: fixed;
+  top: 0;
+  left: 0;
   box-shadow:
   0px 1.8px 2.7px rgba(0, 0, 0, 0.022),
   0px 4.4px 6.9px rgba(0, 0, 0, 0.031),
   0px 9px 14.2px rgba(0, 0, 0, 0.039),
   0px 18.6px 29.2px rgba(0, 0, 0, 0.048),
   0px 51px 80px rgba(0, 0, 0, 0.07)
-;
+  ;
+  z-index: 2;
+}
+
+nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 9rem;
-  padding: 0 2.4rem;
-  background-color: var(--bg-color);
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 100%;
+  position: relative;
 }
 
-#logo{
-  align-items: center;
-  gap: .8rem;
-  text-decoration: none;
-  color: var(--color);
-}
 
 h1{
   color: var(--color);
@@ -75,15 +74,17 @@ ul{
   list-style: none;
 }
 
-li:last-child{
+li:last-child a{
   padding: 1rem;
   background-color: #f5f5f5;
+  color: var(--bg-color);
   border-radius: .5rem;
   cursor: pointer;
 }
 
-li:last-child:hover{
-  opacity: 0.9;
+li:last-child a:hover{
+  background-color: #dadada;
+  color: var(--bg-color);
 }
 
 li a{
@@ -97,14 +98,25 @@ li a:hover{
   color: var(--link-hover);
 }
 
-main{
-  display: grid;
-  /* gap: 2.4rem; */
+h2{
+  margin-bottom: 2.4rem;
+}
+
+h2::before{
+  content: "";
+  position: absolute;
+  left: 3.4rem;
+  width: .42rem;
+  height: 2.6rem;
+  background-color: var(--color);
+  border-radius: .5rem;
+  z-index: -1;
 }
 
 
-section{
+section[id]{
   padding: 4.8rem;
+  padding-top: 18rem;
 }
 
 p{
@@ -133,10 +145,15 @@ button:hover{
   background-color: var(--btn-hover);
 }
 
+label{
+  font-weight: 500;
+}
+
 footer{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   background-color: var(--bg-color);
-  display: grid;
-  place-content: center;
   color: var(--color);
   padding: 2.8rem;
 }
@@ -145,73 +162,49 @@ footer{
   color: var(--hover)
 }
 
-.slideshow-container {
-  width: fit-content;
-  height: 50rem;
-}
-
-.slide {
-  /* display: none; */
-  background-image: url("../images/law.jpg") no-repeat;
-  background-size: cover;
-  background-position: 0 55%;
-  position: absolute;
-  margin-top: 10rem;
-}
-
 .services{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  gap: 2.8rem;
 }
 
 .service{
+  height: 18rem;
   font-weight: 700;
+  font-size: 1.8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   gap: 1.8rem;
-  padding: 2rem;
+  padding: 2.4rem;
   background-color: var(--color);
   color: var(--bg-color);
   border: .2rem solid var(--border);
   border-radius: 1rem;
-  max-width: 28rem;
 }
 .service i{
-  font-size: 3.8rem;
+  font-size: 4.8rem;
 }
 
-#nossa-missao{
-  margin-top: 20rem;
-  padding-top: 20rem;
+#logo{
+  align-items: center;
+  gap: .8rem;
+  text-decoration: none;
+  color: var(--color);
 }
 
-#sobre-nos{
-  margin-top: 20rem;
-  padding-top: 20rem;
-}
-
-#nossos-servicos{
-  margin-top: 20rem;
-  padding-top: 20rem;
-}
 
 #fale-conosco{
   display: flex;
-  justify-content: center;
-  margin-top: 9rem;
-  padding-top: 12rem;
-  gap: 4.8rem;
+  justify-content: space-evenly;
+  gap: 4.2rem;
   background-color: var(--color);
   color: #040f16;
+  padding-bottom: 18rem;
 }
 
-#fale-conosco h2{
-  margin-bottom: 2.4rem;
-}
 
 .form, .infos{
   display: flex;
@@ -222,27 +215,53 @@ footer{
   width: 42rem;
 }
 
-label{
-  font-weight: 500;
-}
-
 .infos p{
   margin-bottom: 2.4rem;
 }
 
-.btn-top{
+/* .btn-top{
   color: var(--link-hover);
   font-size: 4.8rem;
   text-decoration: none;
   width: fit-content;
-  position: fixed;
+  position: absolute;
   right: 2rem;
   bottom: 2rem;
+} */
+
+
+
+/* @media only screen and (min-width: 481px) and (max-width: 768rem){
+
+} */
+
+.hamburguer{
+  display: none;
+  font-size: 3.2rem;
+  cursor: pointer;
 }
 
+@media only screen and (max-width: 935px){
+  .services{
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
 
+@media only screen and (max-width: 692px){
+  .menu{
+    display: none;
+  }
+  .hamburguer{
+    display: block;
+  }
+  
+}
 
-
+@media only screen and (max-width: 640px){
+  .services{
+    grid-template-columns: 1fr; 
+  }
+}
 
 
 
