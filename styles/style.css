@@ -91,11 +91,14 @@ section[id]{
   padding-top: 16rem;
 }
 
-
-article{
+section article{
+  display: flex;
+  gap: 8rem;
+ }
+ 
+article p{
   text-indent: 6.4rem;
   text-align: justify;
-  width: 50%;
 }
 
 
@@ -171,23 +174,46 @@ footer{
 
 .carousel{
   padding-top: 14rem;
+  overflow: hidden;
 }
 
 .slide-container{
   display: flex;
-  width: 100%;
-  overflow: hidden;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 
 .slide{
-  display: none;
+  flex: none;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  pointer-events: none;
 }
 
 .slide img{
-  width: 100vw;
-  height: 50rem;
+  width: 100%;
+  height: 28rem;
   object-fit: cover;
 }
+
+.news-container{
+  scroll-snap-type: x mandatory;
+  position: relative;
+  display: grid;
+  place-content: center;
+  gap: .8rem;
+}
+
+
+.new img{
+  width: 100%;
+  height: 28rem;
+  border-radius: 1.8rem;
+  object-fit: cover;
+}
+
 
 .prev, .next{
   cursor: pointer;
@@ -213,28 +239,13 @@ footer{
   background-color: rgba(0,0,0,0.8);
 }
 
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
 }
 
-@keyframes fade{
-  from{opacity: 4;}
+@keyframes fade {
+  from{opacity: .4;}
   to{opacity: 1}
 }
 
@@ -251,7 +262,7 @@ footer{
   background-color: var(--btn-hover);
 }
 
-.active{
+.active-menu{
   color: var(--hover)
 }
 
@@ -298,19 +309,58 @@ footer{
   max-width: 48rem;
 }
 
+.infos a{
+  text-decoration: none;
+}
+
+select{
+  cursor: pointer;
+  border: 2px solid var(--border);
+  font-weight: 700;
+  padding: 1rem;
+  border-radius: .5rem;
+}
+
 .infos p{
+  font-weight: 700;
   margin-bottom: 2.4rem;
 }
 
 .btn-top{
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: var(--link-hover);
-  font-size: 4.8rem;
+  font-size: 2.4rem;
   position: fixed;
   right: 2.4rem;
-  bottom: 2rem;
+  bottom: 46rem;
   display: none;
+  padding: .8rem;
+  background-color: var(--color);
+  border-radius: .5rem;
 }
+
+.btn-zap{
+  display: flex;
+  align-items: center;
+  color: var(--color);
+  font-size: 4.8rem;
+  cursor: pointer;
+  text-decoration: none;
+  position: fixed;
+  right: 2.8rem;
+  bottom: 2.4rem;
+  padding: .8rem;
+  border-radius: 50%;
+  background-color: green;
+}
+
+.btn-zap:hover{
+  color: var(--color);
+  background-color: rgb(39, 136, 39);
+}
+
 
 .hamburguer{
   display: none;
@@ -325,13 +375,6 @@ footer{
   transition: 300ms;
 }
 
-.contato p{
-  font-weight: 700;
-}
-
-.contato a{
-  text-decoration: none;
-}
 
 .fecha-menu{
   position: fixed;
@@ -358,6 +401,12 @@ footer{
   gap: 1.8rem;
 }
 
+.image-content img{
+  position: relative;
+  border-radius: 1rem;
+}
+
+
 #fale-conosco{
   display: flex;
   justify-content: space-evenly;
@@ -366,6 +415,10 @@ footer{
   background-color: var(--color);
   color: #040f16;
   padding-bottom: 18rem;
+}
+
+#noticias{
+  margin-bottom: 4.8rem;
 }
 
 @media only screen and (max-width: 768px){
@@ -412,6 +465,25 @@ footer{
     left: 2.4rem;
   }
 
+}
+
+@media only screen and (max-width: 1102px){
+  section article{
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+  article img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (min-width: 1920px){
+  .slide img{
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 
