@@ -33,7 +33,25 @@
   </header>
   <main>
     <section class="carousel">
-      <h1>slides</h1>
+      <div class="slide-container">
+        <div class="slide">
+          <img src="assets/law.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="assets/law.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="assets/law.jpg" alt="">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
     </section>
     <section id="nossa-missao">
       <h2>Nossa missão</h2>
@@ -172,6 +190,21 @@
         <input type="email" required name="email" id="email" placeholder="Digite seu email">
         <label for="telefone">Telefone</label>
         <input type="text" required name="telefone" id="telefone" maxlength="15" placeholder="Digite seu telefone">
+        <label for="sexo">Sexo</label>
+        <div class="sexo">
+          <div class="radio-gender">
+            <input type="radio" name="sexo" id="masculino">
+            <label for="masculino">Masculino</label>
+          </div>
+          <div class="radio-gender">
+            <input type="radio" name="sexo" id="feminino">
+            <label for="feminino">Feminino</label>
+          </div>
+        </div>
+        <label for="cidade">Cidade</label>
+        <input type="text" name="cidade" id="cidade" placeholder="Digite sua cidade">
+        <label for="estado">Estado</label>
+        <input type="text" name="estado" id="estado" placeholder="Digite seu estado">
         <label for="mensagem" required name="mensagem" id="mensagem">Mensagem</label>
         <textarea name="mensagem" required id="mensagem" rows="10" placeholder="Digite sua mensagem"></textarea>
         <button class="btn-primary" type="submit">Enviar</button>

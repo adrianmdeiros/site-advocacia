@@ -62,12 +62,6 @@ nav{
   position: relative;
 }
 
-
-h1{
-  color: var(--color);
-}
-
-
 li a{
   font-weight: 700;
   text-decoration: none;
@@ -105,14 +99,13 @@ article{
 }
 
 
-
 input, textarea{
   font-weight: 500;
   resize:none;
   padding: 1rem;
   border: .2rem solid var(--border);
   border-radius: .5rem;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.8rem;
 }
 
 label{
@@ -121,16 +114,14 @@ label{
 
 footer{
   display: flex;
+  gap: .8rem;
   align-items: center;
-  flex-direction: column;
+  justify-content: space-between;
   background-color: var(--bg-color);
   color: var(--color);
   padding: 2.8rem;
 }
 
-.carousel{
-  height: 50rem;
-}
 
 .menu{
   display: flex;
@@ -178,6 +169,74 @@ footer{
   color: var(--bg-color);
 }
 
+.carousel{
+  padding-top: 14rem;
+}
+
+.slide-container{
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide{
+  display: none;
+}
+
+.slide img{
+  width: 100vw;
+  height: 50rem;
+  object-fit: cover;
+}
+
+.prev, .next{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade{
+  from{opacity: 4;}
+  to{opacity: 1}
+}
 
 .btn-primary{
   background-color: var(--bg-color);
@@ -286,6 +345,17 @@ footer{
 
 .isClosed{
   display: none;
+}
+
+.radio-gender{
+  gap: .4rem;
+  font-size: 1.4rem;
+  color: gray;
+}
+
+.sexo{
+  display: flex;
+  gap: 1.8rem;
 }
 
 #fale-conosco{
