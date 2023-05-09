@@ -26,3 +26,19 @@ const checkScreenWidth = () => {
 }
 
 window.addEventListener('resize', checkScreenWidth)
+
+const nav = document.querySelector('.menu')
+const navItems = nav.querySelectorAll('a')
+
+nav.addEventListener('click', (e)=>{
+  const item = e.target
+  if(item.classList.contains('active-menu')){
+    return;
+  }else{
+    navItems.forEach(item => {
+      item.classList.remove('active-menu')
+    })
+    item.classList.add('active-menu')
+  }
+
+})
