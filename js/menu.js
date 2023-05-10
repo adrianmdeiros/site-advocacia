@@ -2,7 +2,6 @@ const menuIcon = document.querySelector('.hamburguer')
 const menu = document.querySelector('.menu')
 const menuBackground = document.querySelector('.fecha-menu')
 
-
 menuIcon.addEventListener('click', () => {
   menu.classList.toggle('menu-mobile')
   menuBackground.classList.toggle('isClosed')
@@ -19,12 +18,11 @@ menuBackground.addEventListener('click', () => {
 const checkScreenWidth = () => {
   const screenWidth = window.innerWidth
 
-  if(screenWidth > 832){
+  if(screenWidth > 908){
     menu.classList.remove('menu-mobile')
     menuIcon.classList.remove('ph-x')
   }
 }
-
 window.addEventListener('resize', checkScreenWidth)
 
 const nav = document.querySelector('.menu')

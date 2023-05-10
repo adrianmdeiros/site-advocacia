@@ -1,12 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nossa Missão</title>
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <title>Sobre nós</title>
 </head>
-<body>
-  
+<body style="background-color: var(--color); color: var(--bg-color);">
+  <header>
+    <nav>
+      <a href="index.html" id="logo">
+        <img class="logo" src="assets/logo.svg" alt="Logo da advocacia">
+        <h1>Advocacia</h1>
+      </a>
+      <i class="ph ph-list hamburguer"></i>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="nossa-missao.html" class="active-menu">Nossa missão</a></li>
+        <li><a href="sobre-nos.html">Sobre nós</a></li>
+        <li><a href="index.html#nossos-servicos">Nosso serviços</a></li>
+        <li><a href="index.html#fale-conosco">Fale Conosco</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="nossa-missao" style="padding-bottom: 16rem;">
+      <h2>Nossa missão</h2>
+      <br>
+      <article>
+        <div class="image-content">
+          <img src="assets/nossa-missao.png" alt="" 2>
+        </div>
+        <div>
+          <p>
+            A missão da nossa empresa, como escritório de advocacia, é ser o parceiro confiável e eficiente dos nossos
+            clientes em todas as questões legais. Nosso objetivo é fornecer serviços jurídicos de alta qualidade, com um
+            atendimento personalizado e uma abordagem estratégica, que agregue valor aos negócios e proteja os interesses
+            de
+            nossos clientes.
+            Buscamos constantemente a excelência em nossa atuação, tanto na prestação de serviços jurídicos quanto na
+            construção de relacionamentos duradouros com nossos clientes. Acreditamos que o sucesso de um escritório de
+            advocacia está diretamente ligado à satisfação e sucesso de seus clientes. Portanto, nos dedicamos a entender
+            as
+            necessidades específicas de cada cliente e oferecer soluções jurídicas eficientes e inovadoras, que superem
+            suas
+            expectativas.
+          </p>
+          <br>
+          <p>
+            Além disso, como empresa, estamos comprometidos com os princípios éticos e a responsabilidade social.
+            Trabalhamos de forma transparente e íntegra, agindo de acordo com os mais altos padrões éticos e
+            profissionais.
+            Nossa missão também inclui o engajamento em iniciativas de responsabilidade social, buscando contribuir para o
+            desenvolvimento da comunidade e a promoção da justiça social.
+            Como escritório de advocacia, estamos constantemente atualizados sobre as mudanças na legislação e tendências
+            do
+            mercado, investindo na capacitação e desenvolvimento de nossa equipe de advogados. Nossa missão é oferecer
+            conhecimento jurídico atualizado e expertise em diversas áreas do direito, para atender às demandas complexas
+            e
+            variadas de nossos clientes.
+          </p>
+          <br>
+          <p>
+            Em resumo, nossa missão como escritório de advocacia é ser um parceiro jurídico confiável, eficiente e
+            proativo,
+            dedicado à defesa dos interesses de nossos clientes, à construção de relacionamentos sólidos e à promoção da
+            justiça e da responsabilidade social. Estamos comprometidos em superar as expectativas de nossos clientes e
+            fornecer soluções jurídicas de excelência para impulsionar seu sucesso.
+          </p>
+        </div>
+      </article>
+      <a href="index.html" class="btn-saiba-mais" >
+        <i class="ph ph-caret-left" style="font-size: 1.8rem;"></i>
+        Voltar
+      </a>
+    </section>
+  </main>
+  <footer>
+    <p>Medeiros Advocacia © <span id="year"></span> - Todos os direitos reservados.</p>
+    <p>Made with ❤ by adrianmedeirosdev</p>
+  </footer>
+  <div class="fecha-menu isClosed"></div>
 </body>
+<script src="js/slide.js"></script>
+<script src="js/slidesnews.js"></script>
+<script src="js/btntotop.js"></script>
+<script src="js/inputphonemask.js"></script>
+<script src="js/yearfooter.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/hashscroll.js"></script>
 </html>

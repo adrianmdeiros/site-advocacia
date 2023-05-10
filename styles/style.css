@@ -116,10 +116,9 @@ label{
 }
 
 footer{
-  display: flex;
+  display: grid;
+  text-align: center;
   gap: .8rem;
-  align-items: center;
-  justify-content: space-between;
   background-color: var(--bg-color);
   color: var(--color);
   padding: 2.8rem;
@@ -352,6 +351,30 @@ select{
   border-radius: .5rem;
 }
 
+.content{
+  display: grid;
+  place-content: center;
+  gap: .8rem;
+}
+
+.btn-saiba-mais{
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  margin-left: auto;
+  width: fit-content;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 1.2rem 2.4rem;
+  background-color: var(--color);
+  color: var(--bg-color);
+  border-radius: 1rem;
+}
+
+.btn-saiba-mais:hover{
+  background-color: var(--link-hover);
+}
+
 .btn-zap{
   display: flex;
   align-items: center;
@@ -365,7 +388,7 @@ select{
   padding: .8rem;
   border-radius: 50%;
   background-color: green;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .btn-zap:hover{
@@ -376,6 +399,7 @@ select{
 
 
 .hamburguer{
+  color: var(--color);
   display: none;
   font-size: 3.2rem;
   cursor: pointer;
@@ -497,6 +521,8 @@ select{
     height: 400px;
     object-fit: cover;
   }
+
+
 }
 
 @media only screen and (min-width: 1920px){
