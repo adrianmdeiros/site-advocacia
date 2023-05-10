@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', () => {
   var hash = window.location.hash
   if(hash){
     var target = document.querySelector(hash)

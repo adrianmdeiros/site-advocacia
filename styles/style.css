@@ -116,6 +116,9 @@ label{
 }
 
 footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   display: grid;
   text-align: center;
   gap: .8rem;
@@ -352,8 +355,9 @@ select{
 }
 
 .content{
-  display: grid;
-  place-content: center;
+  display: flex;
+  width: 50%;
+  flex-direction: column;
   gap: .8rem;
 }
 
