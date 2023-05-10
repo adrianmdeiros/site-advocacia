@@ -116,9 +116,6 @@ label{
 }
 
 footer{
-  position: fixed;
-  bottom: 0;
-  width: 100%;
   display: grid;
   text-align: center;
   gap: .8rem;
@@ -356,7 +353,6 @@ select{
 
 .content{
   display: flex;
-  width: 50%;
   flex-direction: column;
   gap: .8rem;
 }
@@ -526,7 +522,12 @@ select{
     object-fit: cover;
   }
 
+}
 
+@media only screen and (min-width: 1366px){
+  .content{
+    width: 50%;
+  }
 }
 
 @media only screen and (min-width: 1920px){
@@ -534,6 +535,7 @@ select{
     height: 100%;
     object-fit: cover;
   }
+  
 }
 
 
