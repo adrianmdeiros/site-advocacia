@@ -5,9 +5,7 @@ Um exemplo de front-end para um site de escritório de advocacia.
 ![image](https://github.com/user-attachments/assets/1e2e3147-46de-491d-9855-df1580006d3d)
 
 
-### 🚀 Technologies
-
-This project was developed using these technologies:
+### 🚀 Tecnologias
 
 - HTML
 - CSS
@@ -16,5 +14,5 @@ This project was developed using these technologies:
 - Github
 
 
-### ⚖ License
-<p> This project is licensed under <a href="https://opensource.org/license/mit/" target="_blank">The MIT License</a> </p>
+### ⚖ Licença
+<p> Este projeto está licenciado sob a <a href="https://opensource.org/license/mit/" target="_blank">MIT License</a> </p>
